@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>destinations</title>
+  <script src="https://kit.fontawesome.com/3f86a9becd.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Yesteryear&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="logo">Timekeeper's Travels</div>
+    <nav>
+      <a href="#destinations">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Homepage -->
+  <section class="destinationsbg">fsdfs</section>
+    <section id="destinations" data-aos="fade-up" data-aos-duration="900">
+      <h1>Timekeeper's Travels</h1>
+    </section>
+
+  <section id="destinations" data-aos="fade-up" data-aos-duration="900">
+    <h2>Destinations</h2>
+    <div class="destinations-grid">
+      <div class="destinations-card">
+        <h3>
+          Uluru, Australia
+        </h3>
+        <img src="uluru.png">
+        <div class="destinations-overlay">
+          <p>Uluru, or Ayers Rock, is a stunning sandstone monolith in the Australian Outback, revered by the Indigenous Anangu people. Visitors can explore the breathtaking Uluru-Kata Tjuta National Park, witnessing its vibrant colors at sunrise and sunset.</p>
+          <a>Read More...</a>
+        </div>
+      </div>
+      <div class="destinations-card">
+        <h3>São Paulo, Brazil</h3>
+        <img src="saopaolo.png">
+        <div class="destinations-overlay">
+            <p>São Paulo is Brazil's largest city, celebrated for its cultural diversity and vibrant arts scene. The city offers a mix of international cuisine, bustling markets, and lively nightlife, reflecting its dynamic and multicultural atmosphere.</p>
+            <a>Read More...</a>
+          </div>
+      </div>
+      <div class="destinations-card">
+        <h3>Pyramiden, Norway</h3>
+        <img src="pyramiden.png">
+        <div class="destinations-overlay">
+          <p>Pyramiden is an intriguing abandoned Soviet mining town in Svalbard, Norway. This ghost town features well-preserved buildings amidst stunning Arctic landscapes, making it a unique destination for history buffs and adventure seekers alike.</p>
+          <a>Read More...</a>
+        </div>
+      </div>
+      <div class="destinations-card">
+        <h3>Vienna, Austria</h3>
+        <img src="vienna.png">
+        <div class="destinations-overlay">
+          <p>Vienna is Austria's capital, renowned for its imperial history and stunning architecture. Highlights include Schönbrunn Palace and world-class museums, along with charming coffeehouses perfect for enjoying traditional pastries and local culture.</p>
+          <a>Read More...</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" data-aos="fade-up" data-aos-duration="900">
+    <h2>About</h2>
+    <div class="about-frame">
+      <div class="about-item">
+        <img src="timekeeper.jpg">
+        <br>
+        The Timekeeper in Reverse 1999 is, as stated in their name, a time travelling hero that trots around the world trying to search for peace.
+      </div>
+    </div> 
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" data-aos="fade-up" data-aos-duration="900">
+    <h2>Contact</h2>
+    <form novalidate>
+      <input type="text" placeholder="Enter Name Here..." required>
+      <input type="email" placeholder="Enter Email Here..." required>
+      <textarea placeholder="Enter Message Here..." required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="social-icons">
+      <a class="fa-brands fa-instagram" href="https://www.instagram.com"></a>
+      <a class="fa-brands fa-facebook" href="https://www.facebook.com"></a>
+      <a class="fa-brands fa-github" href="https://www.github.com"></a>
+      <a class="fa-brands fa-twitter" href="https://www.x.com"></a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    const toggleSwitch = document.getElementById('mode-toggle');
+    const currentMode = localStorage.getItem('theme');
+    const header = document.querySelector('header');
+
+    if (currentMode === 'dark') {
+      document.body.classList.add('darkmode');
+      toggleSwitch.checked = true;
+    }
+
+    toggleSwitch.addEventListener('change', function () {
+      if (this.checked) {
+        document.body.classList.add('darkmode');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.body.classList.remove('darkmode');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) { 
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
